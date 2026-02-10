@@ -1,0 +1,12 @@
+{
+  "name": "personal-blog",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "node ./scripts/sync-posts-to-docusaurus.mjs",
+    "dev": "npm run sync && npm --prefix ./static-site run start -- --port 4173 --no-open",
+    "build": "npm run sync && npm --prefix ./static-site run build",
+    "serve": "npm --prefix ./static-site run serve"
+  }
+}
