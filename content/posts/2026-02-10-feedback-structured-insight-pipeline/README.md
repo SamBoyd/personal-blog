@@ -59,9 +59,9 @@ Output artifacts:
 3. Connect form responses to Google Sheets.
 4. Create a service account for google sheets and enable the Google sheets api. 
 5. Share the google sheet with the email address for your new service account
-6. Run the Python script `download_feedback.py` to sync the sheet to your local machine
-7. Run `tag_feedback.py` to classify each row by theme/sentiment/urgency using the Claude Code CLI
-8. Run `generate_report.py` to produce a weekly markdown summary
+6. Run the Python script [download_feedback.py](https://github.com/SamBoyd/personal-blog/blob/main/content/posts/2026-02-10-feedback-structured-insight-pipeline/assets/download_feedback.py) to sync the sheet to your local machine
+7. Run [tag_feedback.py](https://github.com/SamBoyd/personal-blog/blob/main/content/posts/2026-02-10-feedback-structured-insight-pipeline/assets/tag_feedback.py) to classify each row by theme/sentiment/urgency using the Claude Code CLI
+8. Run [generate_report.py](https://github.com/SamBoyd/personal-blog/blob/main/content/posts/2026-02-10-feedback-structured-insight-pipeline/assets/generate_report.py) to produce a weekly markdown summary
 9. Commit generated outputs to keep an auditable product feedback history.
 
 ### What this unlocks immediately
