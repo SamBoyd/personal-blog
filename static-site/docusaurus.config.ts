@@ -5,9 +5,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 const mixpanelToken = process.env.MIXPANEL_TOKEN;
 
 const config: Config = {
-  title: 'Personal Blog',
+  title: 'Sam Boyd',
   tagline: 'A minimal Docusaurus blog with repo-first content.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/icon.png',
   future: {
     v4: true,
   },
@@ -81,13 +81,13 @@ const config: Config = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Personal Blog',
+      title: 'Sam Boyd',
       items: [{to: '/blog', label: 'Blog', position: 'left'}],
     },
     footer: {
       style: 'light',
       links: [],
-      copyright: `Copyright © ${new Date().getFullYear()} Personal Blog`,
+      copyright: `Copyright © ${new Date().getFullYear()} Sam Boyd`,
     },
     prism: {
       theme: prismThemes.github,
