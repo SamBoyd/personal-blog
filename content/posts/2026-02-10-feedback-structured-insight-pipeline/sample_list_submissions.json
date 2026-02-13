@@ -1,0 +1,111 @@
+{
+    "page": 1,
+    "limit": 100,
+    "hasMore": false,
+    "totalNumberOfSubmissionsPerFilter": {
+        "all": 2,
+        "completed": 2,
+        "partial": 0
+    },
+    "questions": [
+        {
+            "id": "QA1Yzg",
+            "type": "TEXTAREA",
+            "title": "Let us know your thoughts",
+            "isTitleModifiedByUser": false,
+            "formId": "NpW0Pj",
+            "isDeleted": false,
+            "numberOfResponses": 2,
+            "createdAt": "2026-02-10T08:27:41.000Z",
+            "updatedAt": "2026-02-10T08:27:41.000Z",
+            "fields": [
+                {
+                    "uuid": "4288a94c-5042-4288-a373-7b18bdec0974",
+                    "type": "INPUT_FIELD",
+                    "questionType": "TEXTAREA",
+                    "blockGroupUuid": "4288a94c-5042-4288-a373-7b18bdec0974",
+                    "title": "Let us know your thoughts"
+                }
+            ]
+        },
+        {
+            "id": "zKjr20",
+            "type": "HIDDEN_FIELDS",
+            "title": null,
+            "isTitleModifiedByUser": false,
+            "formId": "NpW0Pj",
+            "isDeleted": false,
+            "numberOfResponses": 1,
+            "createdAt": "2026-02-10T08:53:59.000Z",
+            "updatedAt": "2026-02-10T08:53:59.000Z",
+            "fields": [
+                {
+                    "uuid": "0dc8d7ed-b121-48d9-ad1e-2d9f10525e88",
+                    "type": "HIDDEN_FIELD",
+                    "questionType": "HIDDEN_FIELDS",
+                    "blockGroupUuid": "09de2665-c199-4773-a973-5af0ada25f5c",
+                    "title": "email"
+                }
+            ]
+        }
+    ],
+    "submissions": [
+        {
+            "id": "jaKqZza",
+            "formId": "NpW0Pj",
+            "respondentId": "QKr1GbA",
+            "isCompleted": true,
+            "submittedAt": "2026-02-10T08:56:09.000Z",
+            "createdAt": "2026-02-10T08:56:09.000Z",
+            "updatedAt": "2026-02-10T08:56:09.000Z",
+            "responses": [
+                {
+                    "id": "ye9O8BW",
+                    "formId": "NpW0Pj",
+                    "questionId": "QA1Yzg",
+                    "respondentId": "QKr1GbA",
+                    "submissionId": "jaKqZza",
+                    "sessionUuid": "b296c258-6796-4871-b63a-2c664f9c84b6",
+                    "answer": "also a test 123",
+                    "createdAt": "2026-02-10T08:56:09.000Z",
+                    "updatedAt": "2026-02-10T08:56:09.000Z"
+                },
+                {
+                    "id": "gWMB8EK",
+                    "formId": "NpW0Pj",
+                    "questionId": "zKjr20",
+                    "respondentId": "QKr1GbA",
+                    "submissionId": "jaKqZza",
+                    "sessionUuid": "b296c258-6796-4871-b63a-2c664f9c84b6",
+                    "answer": {
+                        "email": "samboyd10@gmail.com"
+                    },
+                    "createdAt": "2026-02-10T08:56:09.000Z",
+                    "updatedAt": "2026-02-10T08:56:09.000Z"
+                }
+            ]
+        },
+        {
+            "id": "5BNgbZP",
+            "formId": "NpW0Pj",
+            "respondentId": "QKr1GbA",
+            "isCompleted": true,
+            "submittedAt": "2026-02-10T08:54:32.000Z",
+            "createdAt": "2026-02-10T08:54:32.000Z",
+            "updatedAt": "2026-02-10T08:54:32.000Z",
+            "responses": [
+                {
+                    "id": "lVdpXON",
+                    "formId": "NpW0Pj",
+                    "questionId": "QA1Yzg",
+                    "respondentId": "QKr1GbA",
+                    "submissionId": "5BNgbZP",
+                    "sessionUuid": "7119e808-21bf-428c-a3d0-5162c1b41baf",
+                    "answer": "This is a test submission",
+                    "createdAt": "2026-02-10T08:54:32.000Z",
+                    "updatedAt": "2026-02-10T08:54:32.000Z"
+                }
+            ]
+        }
+    ]
+}

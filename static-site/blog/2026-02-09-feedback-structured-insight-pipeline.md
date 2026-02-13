@@ -34,7 +34,7 @@ What we want instead:
 
 The pipeline:
 1. Collect free-form feedback in `Tally.so`.
-2. Store responses in `Google Sheets`.
+2. Pull submissions directly from the `Tally API` to a csv in your git repo.
 3. Produce structured outputs (`tagged-feedback.csv` + weekly summary markdown).
 
 Core fields to generate per entry:
@@ -54,7 +54,6 @@ Output artifacts:
 
 ### Tool stack (all low-cost or free)
 - `Tally.so` for intake form.
-- `Google Sheets` as raw response store.
 - `GitHub` repo for versioned CSV snapshots and reports.
 - Small Python script using an LLM call for tagging.
 - Optional cron job or GitHub Actions for weekly runs.
@@ -62,13 +61,12 @@ Output artifacts:
 ### Setup checklist
 1. Create a short feedback form (what happened, what they expected, impact).
 2. Add hidden fields to your form (email, theme, tags, sentiment, urgency, repeat_signal)
-3. Connect form responses to Google Sheets.
-4. Create a service account for google sheets and enable the Google sheets api. 
-5. Share the google sheet with the email address for your new service account
-6. Run the Python script [download_feedback.py](https://github.com/SamBoyd/personal-blog/blob/main/content/posts/2026-02-10-feedback-structured-insight-pipeline/assets/download_feedback.py) to sync the sheet to your local machine
-7. Run [tag_feedback.py](https://github.com/SamBoyd/personal-blog/blob/main/content/posts/2026-02-10-feedback-structured-insight-pipeline/assets/tag_feedback.py) to classify each row by theme/sentiment/urgency using the Claude Code CLI
-8. Run [generate_report.py](https://github.com/SamBoyd/personal-blog/blob/main/content/posts/2026-02-10-feedback-structured-insight-pipeline/assets/generate_report.py) to produce a weekly markdown summary
-9. Commit generated outputs to keep an auditable product feedback history.
+3. [Create a `Tally` API key](https://tally.so/settings/api-keys) and keep it in your environment (for example `TALLY_API_KEY`).
+4. Capture your `formId` from Tally.
+5. Run the Python script [download_feedback.py](https://github.com/SamBoyd/personal-blog/blob/main/content/posts/2026-02-10-feedback-structured-insight-pipeline/assets/download_feedback.py) to pull submissions into a local CSV snapshot
+6. Run [tag_feedback.py](https://github.com/SamBoyd/personal-blog/blob/main/content/posts/2026-02-10-feedback-structured-insight-pipeline/assets/tag_feedback.py) to classify each row by theme/sentiment/urgency using the Claude Code CLI
+7. Run [generate_report.py](https://github.com/SamBoyd/personal-blog/blob/main/content/posts/2026-02-10-feedback-structured-insight-pipeline/assets/generate_report.py) to produce a weekly markdown summary
+8. Commit generated outputs to keep an auditable product feedback history.
 
 ### What this unlocks immediately
 - Faster weekly review loops without manual sorting.
@@ -78,9 +76,4 @@ Output artifacts:
 ## Closing
 
 You do not need a PM org or expensive tooling to get real signal from feedback. You need a simple, repeatable pipeline that turns raw text into structured inputs you can act on.
-
-In the next post, we can turn this into a concrete starter kit with:
-- a sample CSV schema,
-- a minimal tagging script,
-- and a GitHub Action that generates the weekly report automatically.
 
