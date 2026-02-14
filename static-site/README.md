@@ -24,6 +24,16 @@ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
+## Environment Variables
+
+Mixpanel is optional and only injected when a token is present during build.
+
+```bash
+cp .env.example .env
+```
+
+Set `MIXPANEL_TOKEN` in `.env` (or `.env.local` for machine-specific overrides), then run your normal build command.
+
 ## Deployment
 
 Using SSH:
